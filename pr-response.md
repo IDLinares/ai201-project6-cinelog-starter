@@ -7,12 +7,12 @@
 ## Comment 1 — Rename
 
 **What I did:** I renamed the `save_towatchlist` function to `add_to_watchlist`, along with all references to it.
-**How I verified:** I performed a project-wide search and replace, and verified that all references to `save_towatchlist` were changed to `add_to_watchlist` and re
+**How I verified:** I performed a project-wide search and replace, and verified that all references to `save_towatchlist` - in `watchlist.py` and `watchlist_service.py` - were changed to `add_to_watchlist` and ensured the app still ran as expected and my test for `add_to_watchlist` passed.
 
 ## Comment 2 — Deduplication
 
-**What I did:**
-**How I verified:**
+**What I did:** I added deduplication to the `add_to_watchlist` function, which raises an `AlreadyInWatchlistError` if the film is already in the user's watchlist. I also added an exception handler to the `add_film` route in `watchlist.py` to return a 400 error if the film is already in the user's watchlist, similar to how it's handled in `add_film` in `collection.py`.
+**How I verified:** I added a test for the new error, and verified that it was raised when adding the same film twice.
 
 ## Comment 3 — Missing test
 
