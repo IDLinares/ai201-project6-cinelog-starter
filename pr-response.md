@@ -16,8 +16,8 @@
 
 ## Comment 3 — Missing test
 
-**What I did:**
-**How I verified:**
+**What I did:** I added a test for the `add_to_watchlist` function that verifies that it raises a `FilmNotFoundError` if the film_id does not exist in the database.
+**How I verified:** I added a test for theerror, and verified that it was raised when adding a film that doesn't exist in the database.
 
 ## Comment 4 — Default visibility
 
