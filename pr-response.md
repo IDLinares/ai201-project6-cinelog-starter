@@ -21,9 +21,9 @@
 
 ## Comment 4 — Default visibility
 
-**My position:**
-**Reasoning:**
-**Tradeoff acknowledged:**
+**My position:** I think we should default to private watchlists for now, and add a feature to make them public later.
+**Reasoning:** Watchlists are more sensitive than collections (as it shows user's intent) and it also means users might be sharing their watchlists before they are necessarily ready if the default is public.
+**Tradeoff acknowledged:** We are advertising as a community film tracker, so sharing watchlists will be impossible within the app for now and should be added as a feature later to be more inline with our app's purpose. Collections should remain public for now to keep with the community idea of the app.
 
 ## Comment 5 — Sort order
 
