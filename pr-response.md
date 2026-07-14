@@ -27,9 +27,9 @@
 
 ## Comment 5 — Sort order
 
-**My position:**
-**Reasoning:**
-**Engagement with reviewer's point:**
+**My position:** I agree with the reviewer that the default sort order should be "date added" (newest first).
+**Reasoning:** It gives the user immediate feeback on what films they just added to their watchlist (as it will be at the top of the list). Oldest entries sink to the bottom, so users can see what films they have been putting off watching.
+**Engagement with reviewer's point:** It makes sense for a user to quickly see what films they most recently added to their watchlist, as well as, see which ones have been in the watchlist the longest. It gives a better reference for what the user has been interested in over time and what they have postponed watching for some time. In the future, as film lists grow, adding a search/filter could make it more scannable for a specific film.
 
 ## Comment 6 — Rebase
 
