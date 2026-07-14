@@ -42,6 +42,11 @@
 **What I did:** I added a new route to remove a film from a user's watchlist ( `DELETE /watchlist/<user_id>/remove` ). Added the function, `remove_from_watchlist`, to the `watchlist_service.py` file. Lastly, I added two tests for the new route, one for the happy path, `test_remove_from_watchlist_removes_entry`, and one for the error path, `test_remove_from_watchlist_nonexistent_film_raises`.
 **How I verified:** I made sure the app still ran as expected and all tests in the test suite passed.
 
+## Stretch feature - Edge Case Test
+
+**What I did:**: I added an edge case test like the one for collections to check if a watchlist is in order since I decided the sort order of the watchlist would be "date added" (newest first). The test is `test_get_watchlist_returns_newest_first` in the `test_watchlist.py` file. I also needed to add a new SQLAlchemy relationship to the Film model the same as the one used for the collection feature and test but for watchlists.
+**How I verified:** I made sure the app still ran as expected and all tests in the test suite passed.
+
 ## PR Description
 
 <!-- Written at the end — feature overview, design decisions, manual testing steps -->
