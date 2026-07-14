@@ -17,7 +17,7 @@
 ## Comment 3 — Missing test
 
 **What I did:** I added a test for the `add_to_watchlist` function that verifies that it raises a `FilmNotFoundError` if the film_id does not exist in the database.
-**How I verified:** I added a test for theerror, and verified that it was raised when adding a film that doesn't exist in the database.
+**How I verified:** I added a test for the error, and verified that it was raised when adding a film that doesn't exist in the database.
 
 ## Comment 4 — Default visibility
 
@@ -33,9 +33,9 @@
 
 ## Comment 6 — Rebase
 
-**What conflicted:**
-**How I resolved it:**
-**How I verified no conflict remains:**
+**What conflicted:** During the rebase, the .gitignore file had a conflict with pytest_cache not being ignored. I added the pytest_cache directory to the .gitignore and kept it in my rebase as that directory shouldn't be committed. There was also a conflict with changing WatchlistEntries to default to private and changing the sort order to newest-first. I also kept both of these changes in my rebase as explained in my above PR comments. Lastly, there were semantic conflicts with WatchlistEntry that I now needed to resolve where it referenced the old film_id as a db.Integer.
+**How I resolved it:** I kept my updated .gitignore in the rebase, along with the updated privacy default and sort order as these were new design decisions I made and supported above. I also resolved the semantic conflicts in the WatchlistEntry modelby changing the film_id to a db.String(36) to match the new UUIDs being used for the Film model.
+**How I verified no conflict remains:** I made sure the app still ran as expected all tests in the test suite passed as well. I also verified there were no merge conflicts left during the rebase and that the conflicts were resolved. Lastly, I checked all references to film_id in my chanages refernced the new UUIDs (such as in the docstring in `watchlist_service.py`).
 
 ## PR Description
 
