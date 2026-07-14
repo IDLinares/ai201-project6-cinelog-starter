@@ -37,6 +37,11 @@
 **How I resolved it:** I kept my updated .gitignore in the rebase, along with the updated privacy default and sort order as these were new design decisions I made and supported above. I also resolved the semantic conflicts in the WatchlistEntry modelby changing the film_id to a db.String(36) to match the new UUIDs being used for the Film model.
 **How I verified no conflict remains:** I made sure the app still ran as expected all tests in the test suite passed as well. I also verified there were no merge conflicts left during the rebase and that the conflicts were resolved. Lastly, I checked all references to film_id in my chanages refernced the new UUIDs (such as in the docstring in `watchlist_service.py`).
 
+## Stretch Feature - Remove from watchlist
+
+**What I did:** I added a new route to remove a film from a user's watchlist ( `DELETE /watchlist/<user_id>/remove` ). Added the function, `remove_from_watchlist`, to the `watchlist_service.py` file. Lastly, I added two tests for the new route, one for the happy path, `test_remove_from_watchlist_removes_entry`, and one for the error path, `test_remove_from_watchlist_nonexistent_film_raises`.
+**How I verified:** I made sure the app still ran as expected and all tests in the test suite passed.
+
 ## PR Description
 
 <!-- Written at the end — feature overview, design decisions, manual testing steps -->
