@@ -17,7 +17,7 @@
 
 ## Comment 3 — Missing test
 
-**What I did:** I added a test for the `add_to_watchlist` function that verifies that it raises a `FilmNotFoundError` if the film_id does not exist in the database.
+**What I did:** I added a test for the `add_to_watchlist` function called `test_add_to_watchlist_nonexistent_film_raises` that verifies that it raises a `FilmNotFoundError`if the film_id does not exist in the database when adding to a watchlist. This test was modeled after the `test_add_to_collection_nonexistent_film_raises` test in`test_collection.py` which tests the same `FilmNotFoundError` pattern in the collection service.
 **How I verified:** I added a test for the error, and verified that it was raised when adding a film that doesn't exist in the database.
 
 ## Comment 4 — Default visibility
@@ -47,6 +47,12 @@
 
 **What I did:**: I added an edge case test like the one for collections to check if a watchlist is in order since I decided the sort order of the watchlist would be "date added" (newest first). The test is `test_get_watchlist_returns_newest_first` in the `test_watchlist.py` file. I also needed to add a new SQLAlchemy relationship to the Film model the same as the one used for the collection feature and test but for watchlists.
 **How I verified:** I made sure the app still ran as expected and all tests in the test suite passed.
+
+## Git Log
+
+![Git Log](gitlog.png)
+
+(Only commits starting from 11515c6 are my commits. The previous were the original commits and untouched by me.)
 
 ## PR Description
 
