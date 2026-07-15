@@ -2,7 +2,8 @@
 
 ## AI Usage
 
-<!-- Fill in at the end — how you used AI tools during this project -->
+**What I gave AI:** I asked Claude to review and provide counterpoints to my initial reasoning about keeping the WatchlistEntry models public by default.
+**What I changed:** Its reasoning resonated with me, sepcifically about sensitivity and allowing for explicity consenting, and I decided to keep the default as private. If I were fully implementing this feature, I would add a way to toggle visiblity on a per-entry basis, so when a user is ready to share their watchlists, they can do so.
 
 ## Comment 1 — Rename
 
